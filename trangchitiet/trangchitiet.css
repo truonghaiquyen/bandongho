@@ -1,0 +1,73 @@
+.theBody {
+   margin-top: 3.5rem;
+}
+.containner__yeuthich .heading--layout__yeuThich,
+.containner__star {
+   margin: 0px;
+   margin-left: 20px;
+   cursor: pointer;
+}
+.containner__star {
+   color: var(--yellowBold);
+}
+.containner__title {
+   font-weight: 500;
+   font-size: var(--fz18px);
+   text-transform: capitalize;
+}
+/* xong containner./ */
+.layout__card--left,
+.layout__card--right {
+   width: 45%;
+}
+.theproduct__card div {
+   margin-right: 10px;
+}
+.layout__card--right .theproduct__card {
+   min-height: 0px;
+}
+.theproduct__card .theproduct__price {
+   font-size: var(--fz24px);
+}
+.theproduct__card .theproduct__sale {
+   font-size: var(--fz18px);
+}
+.theproduct__card .theProduct__persentSale {
+   position: relative;
+   left: 0;
+   font-size: var(--fz14px);
+}
+.card--discount {
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+/* xong phần giá  */
+.btn__product a .btn__product--white {
+   padding: 10px 50px;
+   border: 1px solid #0984e3;
+   word-wrap: break-word;
+   border-radius: 8px;
+   transition: opacity 0.2s linear;
+}
+.btn__product--blue {
+   background-color: #0984e3;
+   border: none;
+   color: var(--white);
+}
+.btn__product--white:hover {
+   opacity: 0.8;
+}
+.card__chinhSach table,
+.card__lienhe {
+   text-align: center;
+}
+tbody tr td .icon {
+   color: var(--yellowBold);
+   font-size: var(--fz24px);
+   margin: 10px;
+}
+/* xong phần chính sách mua hàng  */
+table,
+td {
+   text-transform: capitalize;
+}

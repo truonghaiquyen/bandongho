@@ -1,0 +1,11 @@
+.theBody {
+   margin-top: 3.5rem;
+}
+.containner__title {
+   margin: 20px auto;
+   font-size: var(--fz24px);
+}
+.containner__layout {
+   gap: 10px;
+   margin-bottom: 30px;
+}

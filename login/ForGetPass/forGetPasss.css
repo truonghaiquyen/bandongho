@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+img,
+picture,
+svg,
+video {
+   display: block;
+   max-width: 100%;
+}
+input,
+select,
+textarea {
+   background-color: transparent;
+   outline: none;
+}
+button {
+   cursor: pointer;
+   background-color: transparent;
+   outline: none;
+   border: 0;
+}
+a {
+   color: var(--white);
+   text-decoration: none;
+}
+body {
+   min-height: 100vh;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1;
+   font-family: 'Roboto', sans-serif;
+}
+.login {
+   width: 100vw;
+   background-image: url('https://shopwatch.vn/wp-content/uploads/2018/04/anh-bia-dong-ho-11.jpg');
+   height: 100vh;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   position: relative;
+   display: flex;
+}
+
+.login::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.656);
+   z-index: 1;
+}
+:root {
+   --white: white;
+   --yellow: #ffc312;
+   --fz20: 20px;
+   --fz16: 16px;
+}
+.login-body__child {
+   width: 50%;
+}
+.login__child--grow2 {
+   width: 70%;
+}
+.login__body {
+   color: var(--white);
+   margin: auto;
+   width: 70%;
+   height: 70%;
+   border-radius: 10px;
+   z-index: 2;
+   overflow: hidden;
+   background-image: url('https://toigingiuvedep.vn/wp-content/uploads/2021/08/hinh-anh-dong-ho-dep-chat-nhat.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 0 -100px;
+   display: flex;
+   justify-content: space-between;
+}
+/* code trang đổi thành công mật khẩu */
+.login__child--bgblur {
+   background-color: #2f3542ad;
+   padding: 30px;
+   color: var(--yellow);
+   font-size: var(--fz16);
+}
+.login__child--bgblur .login-child__title {
+   text-align: center;
+   color: var(--yellow);
+   margin: 10px;
+   text-transform: uppercase;
+}
+.login-child__inputUser input,
+.login-child__inputPass input {
+   padding: 10px 0;
+   width: 100%;
+   border: none;
+   border-bottom: 1px solid #f5f6fa;
+   color: var(--white);
+   font-size: var(--fz16);
+}
+.login-child__inputUser input::placeholder,
+.login-child__inputPass input::placeholder {
+   color: #a4b0be;
+   font-style: italic;
+}
+.login__child--bgblur .login-child__inputUser,
+.login__child--bgblur .login-child__inputPass,
+.login__child--bgblur .login-child__option {
+   margin-bottom: 20px;
+}
+.login-child__option,
+.login-child__btn {
+   display: flex;
+   justify-content: space-between;
+   font-size: var(--fz16);
+   color: #81ecec;
+}
+.login-child__btn .btn__Login,
+.login-child__btn .btn__Or {
+   padding: 15px;
+   font-size: var(--fz16);
+   min-width: 150px;
+   max-width: 150px;
+   border-radius: 5px;
+   color: var(--white);
+   background-color: #22a6b3;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   transition: opacity 0.2s linear;
+}
+.login-child__btn .btn__Login:hover,
+.login-child__btn .btn__Or:hover {
+   opacity: 0.7;
+}
+.login__child--bgblur .login__child--infomation {
+   color: red;
+   font-size: initial;
+   margin: 5px auto;
+}
+.login-child__btn .btn__Or--red {
+   color: var(--white);
+   background-color: #ff7979;
+}
+.login-child__option a,
+.login-child__option label {
+   position: relative;
+}
+.login-child__option a::after,
+.login-child__option label::after {
+   content: '';
+   position: absolute;
+   bottom: -5px;
+   width: 0%;
+   height: 1px;
+   background-color: white;
+   left: 50%;
+   transform: translate(-50%);
+   transition: width 0.2s linear;
+}
+.login-child__option a:hover::after,
+.login-child__option label:hover::after {
+   width: 100%;
+}
