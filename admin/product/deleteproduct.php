@@ -8,9 +8,10 @@ if (isset($_GET["id"])) {
 $sql = "SELECT `image_url`  FROM `products` WHERE `product_id` LIKE '$id'";
 $query = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($query);
-echo $row["image_url"];
+echo $row["image_url"]; // lấy đường dẫn của ảnh
+
 $duong_dan_tep_anh = '../../' . $row["image_url"];
-if (file_exists($duong_dan_tep_anh)) {
+if (file_exists($duong_dan_tep_anh)) { // kiem tra tệp ảnh có tồn tại k
     if (unlink($duong_dan_tep_anh)) {
         echo "Tệp ảnh đã bị xóa thành công.";
     } else {

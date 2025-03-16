@@ -19,7 +19,7 @@ global $conn;
     <div class="login">
         <div class="login__body">
             <div class="login-body__child login__child--grow2">
-                <div class="heading--layout__logo"><a href="index.php" style="color: #22a6b3 !important;">Đồng hồ</a></div>
+                <!-- <div class="heading--layout__logo"><a href="index.php" style="color: #22a6b3 !important;">Đồng hồ</a></div> -->
             </div>
             <div class="login-body__child login__child--bgblur">
                 <form action="createa.php" method="POST">

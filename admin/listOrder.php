@@ -1,7 +1,6 @@
 <?php
 include '../connect.php';
 global $conn;
-// session_start();
 
 
 ?>
@@ -76,6 +75,7 @@ global $conn;
                                         <td><?php echo $row["note"] ?></td>
                                         <td><?php echo $row["phoneNumbers"] ?></td>
                                         <td>
+                                            <!-- Khi bấm nút, trạng thái đơn hàng thay đổi bằng cách gọi file trong thư mục tinhtrang/ -->
                                             <?php if ($row["status"] == 0) { ?>
                                                 <a onclick="return confirm('Bạn muốn xác nhận đơn hàng này  ?');" class="btn btn-sm btn-danger p-2" href="tinhtrang/accept.php?id=<?php echo $row["idList"] ?>">Chưa xác nhận</a>
                                             <?php } else if ($row["status"] == 1) { ?>

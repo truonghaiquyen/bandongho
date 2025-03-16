@@ -42,7 +42,7 @@ if (isset($_SESSION['loGin']["fullName"])) {
                     <div class="d-flex flex-row justify-content-between align-items-center heading--layout__flex">
                         <!-- xong giới thiệu -->
                         <div class="heading--layout__menu" style="cursor: pointer;">
-                            Menu
+                            Hãng
                             <i class="bi bi-caret-down-fill"></i>
                             <ul class="heading--menu__item">
                                 <li class="menu__item">
@@ -160,7 +160,7 @@ if (isset($_SESSION['loGin']["fullName"])) {
                             $num = mysqli_num_rows($queyrySelect);
                             if ($num > 0) { ?>
                                 <div class="table-responsive ">
-                                    <a class="btn btn-sm btn-success p-2 m-1" href="../export/exportListOder.php?id=<?php echo $userName ?>">Export</a>
+                                    
                                     <table class="table text-start align-middle table-bordered table-striped mb-0 " id="myTable">
                                         <thead>
                                             <tr class="text-dark text-center">

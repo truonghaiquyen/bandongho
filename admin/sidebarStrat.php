@@ -32,7 +32,8 @@
             <a href="danhmuc.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Danh mục</a>
             <a href="product.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Sản phẩm</a>
             <a href="khosanpham.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Kho sản phẩm</a>
-            <a href="listOrder.php" class="nav-item nav-link"><i class="fa fa-list me-2"></i>Hóa đơn</a>
+            <a href="listOrder.php" class="nav-item nav-link"><i class="fa fa-list me-2"></i>Đơn hàng</a>
+            <a href="thongke.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Thống kê</a>
             <a href="userAdmin.php" class="nav-item nav-link"><i class="fa fa-user me-2"></i>User/Amin</a>
             <a onclick="return confirm('BẠN CÓ MUỐN ĐĂNG XUẤT TÀI KHOẢN NÀY KHÔNG ?');" href="../login/LoGin/logOutadmin.php" class="nav-link dropdown-toggle">
                 <i class="far fa-file-alt me-2"></i>Logout

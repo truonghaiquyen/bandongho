@@ -24,13 +24,11 @@ $TongTien = 0;
     <link rel="stylesheet" href="../thư viện/bootstrap/css/bootstrap.css">
 </head>
 <?php
-
-    session_start();
-    if (isset($_SESSION['loGin']["fullName"])) {
-        $fullName  = $_SESSION['loGin']["fullName"];
-        $userName =   $_SESSION['loGin']["userName"];
-    }
-
+session_start();
+if (isset($_SESSION['loGin']["fullName"])) {
+    $fullName  = $_SESSION['loGin']["fullName"];
+    $userName =   $_SESSION['loGin']["userName"];
+}
 ?>
 
 <body>
@@ -41,8 +39,9 @@ $TongTien = 0;
                     <div class="heading--layout__logo"><a href="../index.php" style="color: #d63031 !important;">Đồng hồ</a></div>
                     <!-- xong logo  -->
                     <div class="d-flex flex-row justify-content-between align-items-center heading--layout__flex">
+                        <!-- xong giới thiệu -->
                         <div class="heading--layout__menu" style="cursor: pointer;">
-                            Menu
+                            Hãng
                             <i class="bi bi-caret-down-fill"></i>
                             <ul class="heading--menu__item">
                                 <li class="menu__item">
@@ -90,6 +89,7 @@ $TongTien = 0;
                                         } ?>
                                     </ul>
                                 </li>
+                            
                             </ul>
                         </div>
                         <a href="../trangtim/trangBoy.php">
@@ -100,6 +100,15 @@ $TongTien = 0;
                         </a>
                     </div>
                     <!-- xong menu  -->
+                    <div class="heading--layout__search">
+                        <form class="input-group" action="../trangtim/trangtim.php" method="POST">
+                            <input type="text" name="text_search" class="form-control txtTimKiem" placeholder="tìm theo hãng, tên ,....">
+                            <button class="btn btn-secondary btnTimKiem" type="submit" id="button-addon1" name="buttom_search">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- xong tìm kiếm  -->
                     <div class="d-flex flex-row">
                         <a href="../trangGioHang/trangGioHang.php">
                             <div class="heading--layout__gioHang">
@@ -197,7 +206,7 @@ $TongTien = 0;
                 </div>
             <?php
                     } else {
-                        echo "Mời Đăng Nhập";
+                        echo "Mời Đăng Nhập vào !!!";
                     }
             ?>
             <?php
@@ -212,28 +221,32 @@ $TongTien = 0;
                     <div class="input-group">
                         <div class="input-group mt-3">
                             <span class="input-group-text">Họ và tên</span>
-                            <input type="text" class="form-control" name="hoTen" placeholder="Nguyễn Văn A" required>
+                            <input type="text" class="form-control" name="hoTen" placeholder="" required>
                             <span class="input-group-text ">Số điện thoại</span>
-                            <input type="text" class="form-control" name="soDienThoai" placeholder="012345678" required>
+                            <input type="text" class="form-control" name="soDienThoai" placeholder="" required>
                         </div>
                         <div class="input-group mt-3">
                             <span class="input-group-text">Địa chỉ</span>
-                            <input type="text" class="form-control" name="address" placeholder="Xã Cẩm Định - Huyện Cẩm Giàng - Tỉnh Hải Dương" required>
+                            <input type="text" class="form-control" name="address" placeholder="" required>
                         </div>
                         <div class="input-group mt-3">
                             <span class="input-group-text">Email</span>
-                            <input type="text" class="form-control" name="email" placeholder="qnc@gmail.com" required>
+                            <input type="text" class="form-control" name="email" placeholder="" required>
+                        </div>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text">Thời gian đặt hàng</span>
+                            <input style="pointer-events: none ;" type="text" class="form-control" name="dateOder" id="dateOder" placeholder="chú ý khi giao hàng" required>
                         </div>
                         <div class="input-group mt-3">
                             <span class="input-group-text">Ghi chú</span>
-                            <input type="text" class="form-control" name="note" placeholder="Ghi chú thêm (nếu có)" required>
+                            <input type="text" class="form-control" name="note" placeholder="" required>
                         </div>
                         <div class="cart__title cardProduct__price " style="display: none;">
                             <input type="text" name="giaTien" id="" value="<?php echo ($TongTien); ?>">
                         </div>
                     </div>
                     <center class="mt-3 mb-3">
-                        <button type="submit" class="btn btn-primary" name="muaHang">Đặt Hàng</button>
+                        <button type="su" class="btn btn-primary" name="muaHang">Đặt Hàng</button>
                     </center>
                 </form>
             <?php

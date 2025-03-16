@@ -41,18 +41,18 @@ ob_start();
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (isset($_POST['themSanPham'])) {
                     // Xử lý upload file
-                    $path = "img/products";
-                    $fileName = "";
-                    if (isset($_FILES['image'])) {
-                        if (isset($_FILES['image']['name'])) {
+                    $path = "img/products"; // đường dẫn đén thư mục lưu ảnh
+                    $fileName = ""; // biến lưu tên file khi upload
+                    if (isset($_FILES['image'])) { // kiểm tra form có gửi file lên k
+                        if (isset($_FILES['image']['name'])) { // kiểm tra tên file có tồn tại ko /Giúp tránh lỗi nếu người dùng không chọn file.
                             if (
                                 $_FILES['image']['type'] == "image/jpeg" || $_FILES['image']['type'] == "image/png"
                                 || $_FILES['image']['type'] == "image/jfif" || $_FILES['image']['type'] == "image/webp"
                             ) {
                                 if ($_FILES['image']['size'] <= 240000000) {
-                                    if ($_FILES['image']['error'] == 0) {
+                                    if ($_FILES['image']['error'] == 0) { // khác 0 thì lỗi file
                                         move_uploaded_file($_FILES['image']['tmp_name'], "../../" . $path . "/" . $_FILES['image']['name']);
-                                        $fileName = $path . "/" . $_FILES['image']['name'];
+                                        $fileName = $path . "/" . $_FILES['image']['name']; // chuyển file từ thư mục tạm tmp_name vào img/product/ sau khi thành công gán tên file vào đường dãn file
                                     } else {
                                         echo "Lỗi file";
                                     }
@@ -66,6 +66,8 @@ ob_start();
                             echo "Bạn chưa chọn file";
                         }
                     }
+
+
                     $idSanPham = $_POST["idSanPham"];
                     $tenSanPham = $_POST["tenSanPham"];
                     $giaCaSP = $_POST["giaCaSP"];
@@ -82,6 +84,7 @@ ob_start();
                     ) {
                         echo '<script>confirm("Không được để trống thông tin"); </script>';
                     } else {
+                        //Kiểm tra trùng sản phẩm
                         $query = "SELECT * FROM `products` WHERE `product_id` = '$idSanPham'";
                         $result = mysqli_query($conn, $query);
                         $num = mysqli_num_rows($result);
@@ -98,7 +101,8 @@ ob_start();
             ?>
             <div class="container-fluid pt-4 px-4">
                 <div class="">
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <!-- hỗ trợ upload ảnh -->
+                    <form action="" method="post" enctype="multipart/form-data">  
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Thêm Sản Phẩm</h6>
                             <div class="form-floating mb-3">

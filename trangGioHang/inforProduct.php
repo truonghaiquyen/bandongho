@@ -41,7 +41,7 @@ if (isset($_SESSION['loGin']["fullName"])) {
                     <div class="d-flex flex-row justify-content-between align-items-center heading--layout__flex">
                         <!-- xong giới thiệu -->
                         <div class="heading--layout__menu" style="cursor: pointer;">
-                            Menu
+                            Hãng
                             <i class="bi bi-caret-down-fill"></i>
                             <ul class="heading--menu__item">
                                 <li class="menu__item">
@@ -196,16 +196,16 @@ if (isset($_SESSION['loGin']["fullName"])) {
                                 </div>
                                 <?php
                                 echo 'Tổng tiền hóa đơn : ' .  number_format($TongTien, 3, '.', '.');
-                            } ?>₫
+                            } ?>
                             <?php
                         }
                             ?>
-                </div>
-            <?php
+            </div>
+                <?php
                     } else {
                         echo "Mời Đăng Nhập vào !!!";
                     }
-            ?>
+                ?>
             </div>
             <script defer src="../thư viện/bootstrap/js/bootstrap.js"></script>
             <script src="../thư viện/swiper/cdn.jsdelivr.net_npm_swiper@10.3.1_swiper-bundle.min.js"></script>

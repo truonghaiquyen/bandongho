@@ -1,6 +1,6 @@
 <?php
 include '../connect.php';
-global $conn;
+global $conn; // định nghĩa biến toàn cục để sử dụng trong các truy vấn
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,12 +39,16 @@ global $conn;
             <?php
             include 'navbarStart.php';
             ?>
+
+
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Thông tin user và admin </h6>
                         <a href="userAdmin/themAdmin.php"><button class="btn btn-primary" type="button">Thêm tài khoản</button></a>
                     </div>
+
+
                     <div class="table-responsive ">
                         <table class="table text-start align-middle table-bordered table-striped mb-0" id="myTable">
                             <thead>

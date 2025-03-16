@@ -55,7 +55,7 @@ global $conn;
                         $_SESSION['loGinAdmin']["fullName"] = $row["Name"];
                         $_SESSION['loGinAdmin']["userName"] = $row["userName"];
                         $_SESSION['loGinAdmin']["passWord"] = $row["passWord"];
-                        header("location:../../admin/listOrder.php");
+                        header("location:../../admin/product.php");
                         // echo '<script> ';
                         //  $_SESSION["fullName"] = $row["Name"];
                         //  $_SESSION["userName"] = $row["userName"];
@@ -83,7 +83,7 @@ global $conn;
                      <input type="checkbox" name="" id="checked" value="" />
                      <label for="checked">Show Password</label>
                   </div>
-                  <a href="../ForGetPass/forGetPass.php">Forget Password</a>
+                  <!-- <a href="../ForGetPass/forGetPass.php">Forget Password</a> -->
                </div>
                <!-- xong code option  -->
                <div class="login-child__btn">

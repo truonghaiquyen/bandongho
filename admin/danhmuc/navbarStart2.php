@@ -6,18 +6,18 @@
         <i class="fa fa-bars"></i>
     </a>
     <div class="navbar-nav align-items-center ms-auto">
-        <div class="nav-item dropdown">
+        <!-- <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="fa fa-envelope me-lg-2"></i>
                 <span class="d-none d-lg-inline-flex">Message</span>
             </a>
-        </div>
-        <div class="nav-item dropdown">
+        </div> -->
+        <!-- <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="fa fa-bell me-lg-2"></i>
                 <span class="d-none d-lg-inline-flex">Notificatin</span>
             </a>
-        </div>
+        </div> -->
         <!-- <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img class="rounded-circle me-lg-2" src="../../img/user/testimonial-2.jpg" alt="" style="width: 40px; height: 40px;">

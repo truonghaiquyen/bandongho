@@ -42,7 +42,7 @@ if (isset($_SESSION['loGin']["fullName"])) {
                     <div class="d-flex flex-row justify-content-between align-items-center heading--layout__flex">
                         <!-- xong giới thiệu -->
                         <div class="heading--layout__menu" style="cursor: pointer;">
-                            Menu
+                            Hãng
                             <i class="bi bi-caret-down-fill"></i>
                             <ul class="heading--menu__item">
                                 <li class="menu__item">
@@ -226,7 +226,7 @@ if (isset($_SESSION['loGin']["fullName"])) {
                     <div class="btn__product d-flex flex-row justify-content-between">
                         <?php
                         if ($userName == null) { ?>
-                            <a style="z-index: -1; opacity: 0.5;" href=""><button onclick="message();" type="button" class="btn__product--white btn__product--blue">Mua ngay - Freeship</button></a>
+                            <a style="z-index: -1; opacity: 0.5;" href=""><button onclick="message();" type="button" class="btn__product--white btn__product--blue">Mua ngay</button></a>
                             <a href="../trangGioHang/trangthemGiohang.php?id=<?php echo $row['product_id']; ?>"><button onclick="message();" type="button" class="btn__product--white ">Thêm vào giỏ hàng</button></a>
                         <?php
                         } else { ?>

@@ -38,7 +38,7 @@ if (isset($_SESSION['loGin']["fullName"])) {
                     <div class="d-flex flex-row justify-content-between align-items-center heading--layout__flex">
                         <!-- xong giới thiệu -->
                         <div class="heading--layout__menu" style="cursor: pointer;">
-                            Menu
+                            Hãng
                             <i class="bi bi-caret-down-fill"></i>
                             <ul class="heading--menu__item">
                                 <li class="menu__item">
@@ -500,7 +500,7 @@ if (isset($_SESSION['loGin']["fullName"])) {
                 <h4>Liên hệ</h4>
                 <p>Địa chỉ: <a href="">Trường đại học công nghệ Đông Á</a></p>
                 <p>Điện thoại: <a href="">012345678</a></p>
-                <p>Email: <a href="">nhom9@gmail.com</a></p>
+                <p>Email: <a href="">nhom7@gmail.com</a></p>
             </div>
             <div class="Thefooter__chinhSach">
                 <h4>Chính sách</h4>

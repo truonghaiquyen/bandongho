@@ -2,8 +2,8 @@
 include '../connect.php';
 global $conn;
 $product_id = null;
-if (isset($_GET["id"])) {
-    $product_id = $_GET["id"];
+if (isset($_GET["id"])) { //Kiểm tra nếu có tham số id trong URL (ví dụ: ?id=123).
+    $product_id = $_GET["id"]; //Gán giá trị này vào biến $product_id.
 }
 $fullName = null;
 $userName = null;
@@ -55,7 +55,7 @@ $TongTien = 0;
                         if ($fullName != null) { {
                                 $select = "SELECT * FROM `infor_orders` WHERE `id` = '$product_id'";
                                 $queyrySelect = mysqli_query($conn, $select);
-                                $num = mysqli_num_rows($queyrySelect);
+                                $num = mysqli_num_rows($queyrySelect); // kiểm tra có dữ liệu hay ko
                                 if ($num > 0) { ?>
                                     <div class="table-responsive ">
                                         <table class="table text-start align-middle table-bordered table-striped mb-0 " id="myTable">
@@ -73,7 +73,7 @@ $TongTien = 0;
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                while ($row = mysqli_fetch_array($queyrySelect)) {
+                                                while ($row = mysqli_fetch_array($queyrySelect)) { // lặp qua từng sản phẩm để hiển thị
                                                 ?>
                                                     <tr class="text-dark text-center">
                                                         <td><?php echo $row["brand"] ?></td>
@@ -107,9 +107,6 @@ $TongTien = 0;
                 ?>
                 </div>
             </div>
-            <?php
-            include 'footet.php';
-            ?>
         </div>
     </div>
     </div>
